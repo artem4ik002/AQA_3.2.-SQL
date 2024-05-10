@@ -33,7 +33,6 @@ public class BankLoginTest {
     @BeforeEach
     void setUp() {
         loginPage = open("http://localhost:9999", LoginPage.class);
-
     }
 
     @Test
@@ -62,7 +61,6 @@ public class BankLoginTest {
         verificationPage.verifyVerificationPageVisiblity();
         var verificationCode = DataHelper.generateRandomVerificationCode();
         verificationPage.verify(verificationCode.getCode());
-        verificationPage.verifyErrorNotification("Ошибка! \nНеверно указан код! Попробуйте еще раз.");
-
+        verificationPage.verifyErrorNotification("Ошибка! \nНеверно указан код! Попробуйте ещё раз.");
     }
 }

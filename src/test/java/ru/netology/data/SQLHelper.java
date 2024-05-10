@@ -39,6 +39,5 @@ public class SQLHelper {
     public static void cleanAuthCode() {
         var connection = getConn();
         QUERY_RUNNER.execute(connection, "DELETE FROM auth_codes");
-
     }
 }
